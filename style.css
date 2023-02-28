@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Unica+One');
+
+* {
+    font-family: 'Crimson Text', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    height: 0px;
+    background: #fcfcee;
+}
+
+header {
+    background: #fcfcee;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+    height: 50px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    padding-inline: 25px;
+}
+
+header span {
+    font-family: 'Unica One', sans-serif;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-weight: 900;
+}
+
+header a {
+    text-decoration-color: #0005;
+    text-decoration-style: dotted;
+    color: #000000;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+header a:hover {
+    text-decoration-color: #000;
+}
+
+main {
+    height: 100%;
+}
+
+ul {
+    list-style-type: square;
+    margin: 0;
+    padding: 1em;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.intro {
+    width: calc(100%-100px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-inline: 100px;
+    padding-top: 50px;
+}
+
+.desc {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.desc h1 {
+    font-family: 'Unica One', sans-serif;
+    font-size: 75px;
+    margin: 0;
+    padding: 0;
+}
+
+.img_div {
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    perspective: 1000px;
+
+    /* backface-visibility: hidden; */
+}
+
+.img_div img {
+    max-width: 400px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    /* height: 100%; */
+    border-radius: 50%;
+    box-shadow: 0 5px 10px #0006;
+
+    cursor: pointer;
+    transform: rotateY(0deg);
+    /* backface-visibility: hidden; */
+    transition: transform 1s cubic-bezier(0.39, 0.575, 0.565, 1),
+        -webkit-transform 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.flip {
+    transform: rotateY(360deg) !important;
+}
